@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>background背景设置</title>
+    <style>
+
+      body {
+        /**/
+        height: 2000px;
+      }
+      .one {
+        width: 500px;
+        height: 200px;
+
+        background-color: red;
+        background-image: url("./zhaosi.jpg");
+        /*设置背景图片的平铺no-repeat  repeat  repeat-x  repeat-y*/
+        background-repeat: no-repeat;
+        /*设置背景图片显示位置  top left center */
+        /*x轴 y轴 正负*/
+        background-position:  10px 20px;
+        /*background-position:  center center;*/
+
+        /*简单方式*/
+        /*background: red url("./zhaosi.jpg") no-repeat 10px 20px;*/
+      }
+      .two {
+        width: 1000px;
+        height: 120px;
+        background-image: url("./back,jpg");
+        background-position: center center;
+      }
+
+      .three {
+        width: 130px;
+        height: 125px;
+        background-image: url(".3.jpg");
+        background-position: -240px -90px;
+      }
+
+      .four {
+        height: 300px;
+        background-image: url("./3.jpg");
+        /*设置背景是否固定   fixed 表示固定*/
+        background-attachment: fixed;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="one">
+      我是div
+    </div>
+    <div class="two">我是div</div>
+    <div class="three">我是div</div>
+    <div class="four">我是div</div>
+
+  </body>
+</html>

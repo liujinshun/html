@@ -1,0 +1,40 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>实现跨行,跨列</title>
+    <style>
+        table {
+          /*取消表格之间的间隙*/
+          border-collapse: collapse;
+          border: 1px solid gray;
+        }
+
+        td,th{
+          border: 1px solid gray;
+        }
+
+    </style>
+  </head>
+  <body>
+    <table align="center">
+      <tr>
+        <th>name</th>
+        <th>age</th>
+        <th colspan="2">phone</th>
+      </tr>
+      <tr>
+        <td>zhangsan</td>
+        <td>20</td>
+        <td>1122334455</td>
+        <td rowspan="3">haidianqu</td>
+      </tr>
+      <tr>
+        <td>lisi</td>
+        <td>19</td>
+        <td>99887744</td>
+      </tr>
+    </table>
+
+  </body>
+</html>

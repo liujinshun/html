@@ -1,0 +1,70 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>表格</title>
+  </head>
+  <body>
+<!-- border 设置表格边框  border="0"无边框-->
+    <table border="1" cellpadding="20" cellspacing="0">
+      <!-- cellpadding 设置单元格内容与单元格边框之间的空白间距 cellspacing设置单元格与单元格之间的空白间距 -->
+      <caption>
+        <h1>学生信息</h1>
+      </caption>
+
+      <thead>
+        <tr>
+          <th>name</th>
+          <th>age</th>
+          <th>gender</th>
+        </tr>
+      </thead>
+      <!-- tr只能嵌套td,th,      不能嵌套其他!!!-->
+      <tbody>
+        <!-- align 设置表格在网页中的水平对齐方式  left center right    -->
+        <tr align="center">
+          <td>zhangsan</td>
+          <td>20</td>
+          <td>male</td>
+        </tr>
+
+        <tr>
+          <td>zhangsan</td>
+          <td>20</td>
+          <td>
+            <p>td 就是容器,什么标签都可以嵌套</p>
+          </td>
+        </tr>
+        <tr align="center">
+          <td>zhangsan</td>
+          <td>20</td>
+          <td>
+            <p>td 就是容器,什么标签都可以嵌套</p>
+          </td>
+        </tr>
+
+        <tr align="center">
+          <td>zhangsan</td>
+          <td>20</td>
+          <td>
+            <p>td 就是容器,什么标签都可以嵌套</p>
+          </td>
+        </tr>
+
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>表格可以嵌套表格</td>
+          <td>表格可以嵌套表格</td>
+          <td>
+            <table border="1">
+              <tr><td>表格可以嵌套表格</td></tr>
+              <tr><td>表格可以嵌套表格</td></tr>
+            </table>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+    
+  </body>
+</html>

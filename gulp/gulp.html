@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title></title>
+
+  <!-- Bootstrap -->
+  <link href="./bootstrap.min.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <style>
+    body {
+      font-family: "Helvetica Neue", "Helvetica", "Lucida Grande", "Arial", "Hiragino Sans GB", "Microsoft Yahei", "WenQuanYi Micro Hei", "sans-serif";
+      font-weight: normal;
+      padding-top: 50px;
+    }
+    .jumbotron {
+      background: #cf4646;
+      text-align: center;
+    }
+
+    .navbar-inverse {
+      background-color: #cf4646;
+      border-color: #cf4646;
+    }
+
+
+    .navbar-inverse .navbar-nav>li>a {
+      color: #e8e8e8;
+    }
+
+    .navbar-inverse .navbar-brand {
+      color: #efefef;
+    }
+
+    @media (min-width: 768px) {
+      .site-navbar .navbar-nav {
+        float: right!important;
+      }
+    }
+
+    .navbar-inverse .navbar-toggle {
+      border-color: #fff;
+    }
+
+    .navbar-inverse .navbar-toggle:focus,
+    .navbar-inverse .navbar-toggle:hover {
+      background-color: #cf4646;
+    }
+
+    .navbar-inverse .navbar-collapse,
+    .navbar-inverse .navbar-form {
+      border-color: #ca3131;
+    }
+
+    .jumbotron>p {
+      color: #fff;
+    }
+
+    .jumbotron>p>a {
+      border: 1px solid #efbfbf;
+      background: #cf4646;
+      color: #efbfbf;
+    }
+
+    .jumbotron>p>a:hover {
+      border: 1px solid #fff;
+      background: #cf4646;
+      color: #fff;
+    }
+
+
+    .pute {
+      text-align: center;
+      margin-top: 80px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navbar navbar-inverse navbar-fixed-top site-navbar" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                  <span class="sr-only"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+        <a class="navbar-brand" href="#">Gulp 中文网</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="#">首页</a>
+          </li>
+          <li><a href="#">中文文档</a>
+          </li>
+          <li><a href="#">入门指南</a>
+          </li>
+          <li><a href="#">API</a>
+          </li>
+          <li><a href="#">插件开发</a>
+          </li>
+          <li><a href="#">常见问题</a>
+          </li>
+          <li><a href="#">使用技巧</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="jumbotron">
+    <img class="logo" style="width:200px;height:121px"src="./image/gulp-white-text.svg">
+    <p class="lead">用自动化构建工具增强你的工作流程！</p>
+    <p style="margin-top:0px"><a class="btn btn-lg" role="button">开始使用</a>
+    </p>
+  </div>
+
+
+  <main class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>易于使用</h2>
+        <p>通过代码优于配置的策略，Gulp 让简单的任务简单，复杂的任务可管理。</p>
+      </div>
+      <div class="col-md-6">
+        <h2>构建快速</h2>
+        <p>利用 Node.js 流的威力，你可以快速构建项目并减少频繁的 IO 操作。</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <h2>插件高质</h2>
+        <p>Gulp 严格的插件指南确保插件如你期望的那样简洁高质得工作。</p>
+      </div>
+      <div class="col-md-6">
+        <h2>易于学习</h2>
+        <p>通过最少的 API，掌握 Gulp 毫不费力，构建工作尽在掌握：如同一系列流管道。</p>
+      </div>
+    </div>
+  </main>
+
+  <div class="container">
+    <div class="row">
+      <div class="pute">
+        <p>© Gulp 中文网 2015</p>
+        <p>京ICP备11008151号 | 京公网安备11010802014853</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="./jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="./bootstrap.min.js"></script>
+</body>
+
+</html>

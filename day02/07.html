@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>继承(本质是指少写代码)</title>
+    <style>
+    .one {
+      color: red;
+    }
+
+    .one p {
+      color:green;
+    }
+
+    .two {
+      color: yellow;
+    }
+
+    .three {
+      width: 50px;
+      height: 100px;
+    }
+    </style>
+  </head>
+  <body>
+    <!--
+    继承有局限性：不是所有的样式都能继承
+    文本相关的基本都可以继承，其他例外
+   -->
+   <div class="one">
+     div元素,被继承为红色
+     <p>div中的p 被继承为绿色</p>
+   </div>
+
+   <div class="two">
+     <!-- a的颜色无法继承 -->
+     <a href="#">a超链接</a>
+     <a href="https://www.baidu.com">xxx</a>
+   </div>
+
+   <!-- 块级元素的宽度可以继承,但是高度不可以继承!!! -->
+     <div class="three">
+       <div>three的子元素</div>
+       <p>宽度可以被继承</p>
+       <span>高度不可以被继承</span>
+     </div>
+
+  </body>
+</html>

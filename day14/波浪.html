@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: rgba(56, 205, 226, 1)
+    }
+
+    .bo-1 {
+      width: 1850px;
+      animation: top 2s linear infinite;
+      position: absolute;
+      bottom: 0%;
+    }
+
+    .bo-2 {
+      animation: bottom 2s linear infinite;
+      position: absolute;
+      bottom: 0%;
+    }
+
+    @keyframes top {
+      0% {
+        transform: translateY(50px);
+      }
+
+      50% {
+        transform: translateY(20px);
+      }
+
+      100% {
+        transform: translateY(50px);
+      }
+    }
+
+    @keyframes bottom {
+      0% {
+        transform: translateY(20px);
+      }
+
+      50% {
+        transform: translateY(50px);
+      }
+
+      100% {
+        transform: translateY(20px);
+      }
+    }
+
+    .sun {
+      position: relative;
+      top: -140px;
+      right: -30px;
+      margin: 10px;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: rgb(249, 239, 4);
+    }
+
+    .sun-1 {
+      margin: 50px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 10px solid rgba(235, 237, 134, 0);
+      animation: taiyang 2s linear infinite;
+    }
+
+    @keyframes taiyang {
+      0% {
+        border: 10px solid rgba(235, 237, 134, 0);
+
+      }
+
+      50% {
+        border: 10px solid rgba(235, 237, 134, 0.8);
+        transform: scale(1.6,1.6);
+      }
+
+      100% {
+      border: 10px solid rgba(235, 237, 134, 0);
+      transform: scale(1.6,1.6);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="sun-1"></div>
+  <div class="sun"></div>
+  <img src="./image/2.png" alt="" class="bo-2">
+  <img src="./image/1.png" alt="" class="bo-1">
+
+</body>
+
+</html>

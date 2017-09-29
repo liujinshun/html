@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+
+  <table>
+    <caption>学生信息
+      <button type="button" name="button" id="add">添加</button>
+      <tr>
+        <th>姓名</th>
+        <th>年龄</th>
+        <th>成绩</th>
+        <th>删除</th>
+      </tr>
+    </caption>
+  </table>
+  <script>
+    var stus = [
+      ['lisi', 20, 88],
+      ['zhangsan', 18, 59],
+      ['zhaosi', 40, 30],
+      ['wangwu', 30, 66],
+      ['zhaoliu', 34, 67],
+      ['wangqi', 78, 90]
+    ];
+    var i = 0;
+    var table = document.getElementsByTagName("table")[0];
+    var add = document.getElementById("add");
+    add.addEventListener("click", function() {
+      var item = document.createElement("tr");
+      item.innerHTML = "<th>" + stus[i][0] + "</th>" + "<th>" + stus[i][1] + "</th>" + "<th>" + stus[i][3] + "</th>" + "<button>" + "删除" + "</button>";
+      table.appendChild(item);
+      item.getElementsByTagName("button")[0].addEventListener("click", function() {
+        table.removeChild(item);
+      }, false);
+      i++;
+      if (i == 5) {
+        i = 0;
+      };
+    }, false);
+  </script>
+</body>
+
+</html>
+
+
+
+<!-- 获取table表格
+获取添加按钮
+对添加按钮添加事件 点击触发函数{
+创建tr节点
+用节点进行添加数据代码
+向table添加数据节点
+获取节点找标签名  按钮的集合 添加事件 点击触发删除{
+向table删除数据节点
+进行循环
+}
+} -->

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>表格</title>
+  <style media="screen">
+    td,
+    th {
+      text-align: center;
+      width: 70px;
+      height: 35px;
+      padding: 0px;
+    }
+
+    table {
+      margin: 100px auto;
+    }
+
+    button {
+      width: 70px;
+      height: 35px;
+      padding: 0;
+    }
+
+    .add {
+      border-radius: 10px;
+      background-color: green;
+      color: white;
+      outline: none;
+    }
+  </style>
+</head>
+
+<body>
+  <table border="1" cellspacing="0" class='one'>
+    <caption>
+      学生信息 <button type="button" name="button" class="add">添加数据</button>
+    </caption>
+    <tr>
+      <th>Name</th>
+      <th>gender</th>
+      <th>age</th>
+      <th style="color:red">删除</th>
+    </tr>
+  </table>
+  <script type="text/javascript">
+    var stus = [
+      ['lisi', 20, 88],
+      ['zhangsan', 18, 59],
+      ['zhaosi', 40, 30],
+      ['wangwu', 30, 66],
+      ['zhaoliu', 34, 67],
+      ['wangqi', 78, 90]
+    ];
+    var i = 0;
+    //getElementsByClassName返回文档中所有指定类名的元素集合，作为 NodeList 对象。
+    var add = document.getElementsByClassName('add')[0];
+    var table = document.getElementsByTagName('table')[0];
+    //addEventListener用于向指定元素添加事件句柄,事件句柄指事件发生时要进行的操作,也叫事件处理函数.
+    add.addEventListener("click", function() {
+      //createElement创建节点
+      var item = document.createElement("tr");
+      //innerHTML 属性设置或返回表格行的开始和结束标签之间的 HTML。
+      item.innerHTML = "<td>" + stus[i][0] + "</td>" + "<td>" + stus[i][1] + "</td>" + "<td>" + stus[i][2] + "</td>" + "<button>" + "删除" + "</button>"
+      table.appendChild(item);
+      //getElementsByTagName返回带有指定标签名的对象的集合。
+      item.getElementsByTagName('button')[0].addEventListener("click", function() {
+      table.removeChild(item);
+      }, false);
+      i++;
+      if (i == 5) {
+        console.log(i);
+        i = 0;
+      }
+    }, false);
+
+
+  </script>
+</body>
+
+</html>

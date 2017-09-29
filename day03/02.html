@@ -1,0 +1,90 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <title>文本外观属性</title>
+    <meta charset="utf-8">
+    <style>
+      .one {
+        /*字体大小*/
+        font-size: 50px;
+        /*字间距 允许使用负值 字体间距为负 字和字会重叠一起*/
+        letter-spacing: 10px;
+      }
+      .two {
+        font-size: 50px;
+        /*单词间距*/
+        word-spacing: 50px;
+      }
+      .three {
+        font-size: 30px;
+        /*行间距*/
+        /*line-height: 120%;*/
+        /*line-height: 36px;*/
+        /*line-height: 1.2em;*/
+        /*以上三种方式设置的line-height都会让后代继承:继承祖先元素的行高!*/
+
+        /*后代会继承该因子而不是继承父元素行高!!!*/
+        line-height:1.2;
+
+      }
+      .three p {
+        font-size: 10px;
+      }
+      .four {
+        /*水平对齐方式 默认left    right右对齐 center居中*/
+        text-align: center;
+      }
+      img.small {
+        /*图片宽和高*/
+        width: 200px;
+        height: 200px;
+      }
+      a {
+        /*超链接下划线操作 none */
+        font-size: 30px;
+        text-decoration: none;
+      }
+      .five img{
+        /*垂直对齐方式  适用于行内元素  top middle bottom*/
+        vertical-align: middle;
+      }
+      .six {
+        /*首行缩进*/
+        /*text-indent: 20px;*/
+        text-indent: 2em;
+      }
+
+    </style>
+  </head>
+  <body>
+    <p class="one">字体大小,字间距</p>
+
+    <p class="two">hello world</p>
+
+    <div class="three">
+      行间距<br>
+      行间距<br>
+      行间距<br>
+      <p>行间距</p>
+      <p>行间距</p>
+      <p>行间距</p>
+    </div>
+
+    <div class="four">
+      水平对齐<br>
+      水平对齐<br>
+      <img class="small"src="./colors.png" >
+      <img class="small"src="./colors.png" >
+      <a href="#">超链接</a>
+      <p class="five">
+        <img class="small" src="./colors.png"><span>颜色图片</span>
+      </p>
+    </div>
+    <p class="six">
+      首行缩进<br>
+      首行缩进<br>
+      首行缩进<br>
+      首行缩进<br>
+    </p>
+  </body>
+</html>

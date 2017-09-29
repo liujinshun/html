@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .heart {
+      width: 210px;
+      height: 187px;
+      margin: 200px 600px;
+      animation: jump 0.6s  infinite;
+    }
+
+    .heart-1 {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: rgb(228, 73, 143);
+      display: inline-block;
+      position: relative;
+      top: 9px;
+      right: -15px;
+    }
+
+    .heart-2 {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: rgb(228, 73, 143);
+      display: inline-block;
+      position: relative;
+      top: 9px;
+      right: 15px;
+    }
+
+    .heart-3 {
+      width: 100px;
+      height: 100px;
+      background: rgb(228, 73, 143);
+      transform: rotateZ(45deg);
+      position: relative;
+      top: -58px;
+      right: -52px;
+    }
+
+    @keyframes jump {
+      0% {
+        transform: scale(0.9,0.9);
+      }
+
+      100% {
+        transform: scale(1.1,1.1);
+      }
+
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="heart">
+    <div class="heart-1"></div>
+    <div class="heart-2"></div>
+    <div class="heart-3"></div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <script type="text/javascript">
+    function huiwen(str) {
+      var str, i = 0,
+        e = str.length - 1;
+      while (true) {
+        if (i >= e) {
+          return true;
+        }
+        if (str[i] == str[e]) {
+          i++;
+          e--;
+          continue;
+        } else {
+          return false;
+        }
+      }
+    }
+    console.log(huiwen("123321"));
+    console.log(huiwen("124321"));
+    console.log(huiwen("Asbsa"));
+    console.log(huiwen("asbbsa"));
+
+    function huiwen2(str2){
+      return str2 === str2.split("").reverse().join("");
+    }
+
+    console.log(huiwen2("123321"));
+    console.log(huiwen2("asd"));
+  </script>
+
+</body>
+
+</html>

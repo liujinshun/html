@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <button type="button" name="button" id="btn">点击</button>
+  <h1><p id="pp">我是随机的颜色</p></h1>
+
+  <script type="text/javascript">
+    var btn = document.getElementById('btn');
+    var pp = document.getElementById('pp');
+
+    btn.onclick = function() {
+      pp.style.color = rgb();
+    }
+
+    function rgb() {
+      var r = Math.floor(Math.random() * 256);
+      var g = Math.floor(Math.random() * 256);
+      var b = Math.floor(Math.random() * 256);
+      return "rgb(" + r + ',' + g + ',' + b + ")";
+    }
+  </script>
+</body>
+
+</html>

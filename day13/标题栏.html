@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .box {
+      width: 200px;
+      height: 100px;
+      margin: 92px;
+      position: relative;
+      left: 6%;
+      margin-left: -100px;
+      transform-style: preserve-3d;
+      transition: all 1s;
+      display: inline-block;
+    }
+
+    .box>div {
+      width: 200px;
+      height: 100px;
+      position: absolute;
+    }
+
+    .top {
+      background: red;
+      transform: rotateX(90deg) translateZ(50px);
+    }
+
+    .before {
+      background: cyan;
+      transform: translateZ(50px);
+    }
+
+
+    body {
+      line-height: 100px;
+      text-align: center;
+      font-size: 30px;
+    }
+
+    .box:hover{
+      transform: rotate3d(1,0,0,-90deg);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box">
+    <div class="top">
+      <span>小东东</span>
+    </div>
+    <div class="before">
+      <span>东东东</span>
+    </div>
+  </div>
+  <div class="box">
+    <div class="top">
+      <span>小东东</span>
+    </div>
+    <div class="before">
+      <span>东东东</span>
+    </div>
+  </div>
+  <div class="box">
+    <div class="top">
+      <span>小东东</span>
+    </div>
+    <div class="before">
+      <span>东东东</span>
+    </div>
+  </div>
+  <div class="box">
+    <div class="top">
+      <span>小东东</span>
+    </div>
+    <div class="before">
+      <span>东东东</span>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>

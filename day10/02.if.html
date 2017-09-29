@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>if</title>
+</head>
+
+<body>
+
+  <script type="text/javascript">
+    var a = 40;
+    // 分开写 每一个都会判断, 为真的运行
+    if (a > 30) {
+      console.log("a > 30");
+    }
+
+    if (a > 35) {
+      console.log("a > 35");
+    }
+
+    if (a == 30) {
+      console.log("a == 30");
+    }
+
+    if (a < 30) {
+      console.log("a < 30");
+    }
+
+    // 写在一起,从头开始依次执行,为真时不再运行,
+
+    if (a > 30) {
+      console.log("a > 30");
+    } else if (a > 35) {
+      console.log("a > 35");
+    } else if (a == 30) {
+      console.log("a == 30");
+    } else if (a < 30) {
+      console.log("a < 30");
+    }
+  </script>
+
+</body>
+
+</html>

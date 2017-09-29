@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>2栏布局，左侧固定，右侧自适应</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .container-1,
+      .container-2 {
+        height: 200px;
+        margin-top: 50px;
+      }
+      .container-2 {
+        position: relative;
+      }
+
+      .container-2 .left {
+        width: 200px;
+        height: 200px;
+        background: blue;
+        float: left;
+      }
+
+      .container-2 .right {
+        position: absolute;
+        top: 0;
+        left: 200px;
+        right: 0;
+        height: 200px;
+        background: yellow;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="container-2">
+      <div class="left"></div>
+      <div class="right"></div>
+    </div>
+
+  </body>
+</html>

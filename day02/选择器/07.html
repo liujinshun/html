@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>并集选择器</title>
+    <!-- 对多个集合中的所有的内容合并在一起进行设置。 -->
+    <style>
+
+    p,div{
+      color: red;
+    }
+
+    h3 span , h2 span {
+      color: blue;
+    }
+
+    </style>
+  </head>
+  <body>
+
+    <p>ppp变红</p>
+    <div>div变红</div>
+    <h1>h1原样</h1>
+
+    <h3><span>  h3 &gt; span变蓝</span></h3>
+    <h2><span> h2 &gt; span变蓝</span></h2>
+    <h2>原样</h2>
+    <h3>原样</h3>
+    <span>原样</span>
+
+  </body>
+</html>

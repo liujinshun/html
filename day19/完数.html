@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+  <script>
+      var arr=1000;
+      var sum,i,j;
+
+      for(i=1; i<arr; i++){
+      sum=0;
+        for(j=1; j<i; j++){
+          if(i%j==0){
+            sum+=j;
+          }
+          }
+          if(i==sum){
+            console.log(i);
+        }
+      }
+
+
+  </script>
+
+  </body>
+</html>

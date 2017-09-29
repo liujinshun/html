@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>关键词。。。。</title>
+    <style media="screen">
+
+      div {
+        border: 2px solid rgb(177, 177, 177);
+        height: 300px;
+        width: 500px;
+      }
+
+      span {
+        color: rgb(249, 12, 12);
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="show" contentEditable="true"></div>
+    <button id=btn"" type="button" name="button">测试</button>
+    <script type="text/javascript">
+      var sen = ["习近平", "薄熙来", "周永康"];
+      var re = /习近平|薄熙来|周永康/g;
+      var btn = document.getElementById("btn"),
+          input = document.getElementById('input'),
+          show = document.getElementById('show');
+
+      var str = "习近平多撒谎的撒娇肯定还是空间的哈萨克计划按手机客户端金卡是大家看撒谎都是周永康说官卡是的撒大所多及刘薄熙来和哪撒大声地所大官额周永康投取";
+
+
+      function distinguish(str) {
+        return str.replace(re, function (match, p1, p2, p3, p4, p5) {
+        return `<span>${match}</span>`;
+        });
+      };
+
+      show.addEventListener('blur', function(e) {
+        console.log(show.innerText);
+        show.innerHTML = distinguish(show.innerText);
+      });
+    </script>
+  </body>
+</html>

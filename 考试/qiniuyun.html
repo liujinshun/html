@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>Bootstrap 101 Template</title>
+
+  <!-- Bootstrap -->
+  <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+
+    a,
+    img {
+      border: 0;
+    }
+
+
+    .flexslider {
+      position: relative;
+      height: 568px;
+      overflow: hidden;
+    }
+
+    .slides {
+      position: relative;
+      z-index: 1;
+    }
+
+    .slides li {
+      height: 568px;
+    }
+
+    .flex-control-nav {
+      position: absolute;
+      bottom: 10px;
+      z-index: 2;
+      width: 100%;
+      text-align: center;
+    }
+
+    .flex-control-nav li {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      margin: 0 5px;
+      *display: inline;
+      zoom: 1;
+    }
+
+    .flex-control-nav a {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      line-height: 40px;
+      overflow: hidden;
+      background: url(image/dot.png) right 0 no-repeat;
+      opacity: 0.5;
+      cursor: pointer;
+    }
+
+    .flex-control-nav .flex-active {
+      background-position: 0 0;
+    }
+
+    .flex-direction-nav {
+      position: absolute;
+      z-index: 3;
+      width: 100%;
+      top: 45%;
+    }
+
+
+    .btn-hollow {
+      border-color: #fff;
+      color: #fff;
+      background-color: transparent;
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+
+    .btn-primary {
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+
+    .btn {
+      font-size: 0.14rem;
+      transition: background-color 0.3s;
+    }
+
+    .btn-hollow:hover,
+    .btn-hollow:focus {
+      color: #006992;
+      background-color: #FFF;
+      border-color: #FFF;
+    }
+
+    .btn-primary:hover {
+      color: #fff;
+      background-color: #007bab;
+      border-color: #006287;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    div.navbar {
+      min-height: 68px;
+      margin-bottom: 0;
+      position: absolute;
+      z-index: 1000;
+      width: 100%;
+      background-color: transparent;
+      border: none;
+    }
+
+    div.navbar:hover {
+      background-color: #303848;
+    }
+
+    .navbar-inverse .navbar-nav>li>a {
+      color: #fff;
+    }
+
+    .navbar-inverse .navbar-nav>li>a:hover {
+      color: rgb(48, 139, 213);
+    }
+
+    .hold {
+      width: 24%;
+      height: 55%;
+      position: relative;
+      top: 100px;
+      left: 960px;
+    }
+
+    .hp2 {
+      position: relative;
+      top: 240px;
+      right: -460px;
+      color: #fff;
+    }
+
+    .hhp2 {
+      position: relative;
+      top: 240px;
+      left: 960px;
+      color: #fff;
+    }
+
+    .features .intro .title {
+      font-size: 4.3rem;
+      margin-top: 4.2rem;
+      margin-bottom: 4.2rem;
+      text-align: center;
+      font-weight: 300;
+    }
+
+    .features .media-object {
+      max-width: 12.4rem;
+    }
+
+    .features .media-heading {
+      margin-bottom: 1.20rem;
+    }
+
+    .features-solution {
+      background: #F7F8F9;
+    }
+
+    .features .intro .desc {
+      text-align: center;
+    }
+
+    .features {
+      padding: 7.50rem 0 7.50rem;
+    }
+
+    .features .thumbnail h4 {
+      text-align: center;
+    }
+
+    .features .caption.caption-index p {
+      color: #888;
+      font-size: 1.14rem;
+      line-height: 2.28rem;
+    }
+
+    .helper {
+      z-index: 1000;
+      min-width: 42px;
+      min-height: 128px;
+      overflow: hidden;
+      position: fixed;
+      top: 50%;
+      right: 8px;
+    }
+
+    .helper #waiter img {
+      width: 40px;
+    }
+
+    .helper #waiter span {
+      display: inline-block;
+      line-height: 16px;
+      padding: 5px 12px;
+      writing-mode: horizontal-tb;
+    }
+
+    .helper #waiter {
+      display: block;
+      width: 42px;
+      height: 128px;
+      word-break: break-all;
+      text-align: center;
+      color: #333;
+      background: #FFF;
+      border: 1px solid #D1D5DB;
+      box-shadow: 0 0px 1px rgba(0, 0, 0, 0.1);
+    }
+
+    .helper .close-btn {
+      display: inline-block;
+      width: 42px;
+      height: 35px;
+      padding: 5px 0;
+      text-align: center;
+      background: #FFF;
+      border: 1px solid #D1D5DB;
+      border-top: none;
+      box-shadow: 0 0px 1px rgba(0, 0, 0, 0.1);
+    }
+
+    .helper .close-btn img {
+      width: 15px;
+      opacity: 0.6;
+      filter: alpha(opacity=60);
+    }
+
+    .stripe.stripe-blue {
+      background-color: #00A0DE;
+      color: #FFF;
+    }
+
+    .stripe {
+      padding: 30px;
+    }
+
+    .btn-lg,
+    .btn-group-lg>.btn,
+    .btn-group-lg>.btn {
+      padding: 0.10rem 0.30rem;
+      font-size: 1.9rem;
+      line-height: 2.333333;
+      border-radius: 4px;
+    }
+
+    .btn-hollow {
+      color: #FFF;
+      background-color: transparent;
+      border-color: #FFF;
+    }
+
+    .btn-hollow:hover,
+    .btn-hollow:focus {
+      color: #006992;
+      background-color: #FFF;
+      border-color: #FFF;
+    }
+
+    .btn:active,
+    .btn.active {
+      outline: 0;
+      background-image: none;
+      -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+      box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    }
+
+    footer {
+      padding: 70px 0;
+      background-color: #303848;
+      color: #FFF;
+      vertical-align: baseline;
+      transition: left .4s ease-in;
+      font-weight: 300;
+    }
+
+    footer .container dl dt {
+      margin-bottom: 20px;
+    }
+
+    dt {
+      font-weight: bold;
+    }
+
+    dt,
+    dd {
+      line-height: 1.7;
+    }
+
+    footer .container .grey-link a {
+      color: #adaeb3;
+    }
+
+    @media (min-width: 768px) {
+      .col-sm-4 {
+        width: 33.33333333%;
+      }
+    }
+
+    .features .list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    @media (min-width: 768px) {
+      .col-sm-3 {
+        width: 25%;
+      }
+    }
+
+    footer .links {
+      margin: 35px 0 20px;
+      border-top: 1px solid #4C5461;
+      font-size: 12px;
+    }
+
+    footer .cloud-verify {
+      float: right;
+      margin-top: 25px;
+    }
+
+    footer .cloud-verify .iso-logo {
+      display: block;
+      width: 75px;
+      height: 60px;
+      background-image: url("./image/b5.png");
+      background-repeat: no-repeat;
+      background-size: auto 60px;
+      float: right;
+      margin-right: 20px;
+    }
+
+    footer .cloud-verify .verify-logo {
+      display: block;
+      width: 70px;
+      height: 60px;
+      background-image: url("./image/b6.png");
+      background-repeat: no-repeat;
+      background-size: auto 60px;
+      float: right;
+    }
+
+    .features-hotnews .hotnews-box img {
+      width: 100%;
+    }
+
+    .features .row .col-sm-6 {
+      margin-bottom: 0.25rem;
+    }
+
+    .features p,
+    .features a {
+      color: #888;
+    }
+
+    .features-hotnews .hotnews-box .infobox {
+      padding: 0.10rem;
+    }
+
+    .features-hotnews .hotnews-box:hover {
+      cursor: pointer;
+      transition: all 0.3s;
+      transform: scale(1.02, 1.02);
+      box-shadow: 0 0 0 #EFEFEF, 0.02rem 0.02rem 0.2rem #B9B9B9;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    .features .list li.hot a {
+      color: #2f3033;
+    }
+
+    .features-hotnews .hotnews-title {
+      padding-bottom: 1.0rem;
+      font-weight: 400;
+      color: #97989c;
+    }
+
+    .features .list a:hover {
+      color: #00A0DE;
+    }
+
+    .features a:hover {
+      color: #28aedf;
+    }
+
+    .features a.more {
+      display: inline-block;
+      margin-top: 0;
+      color: #00A0DE;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: 1000;
+      display: none;
+      float: left;
+      min-width: 160px;
+      padding: 5px 0;
+      margin: 2px 0 0;
+      list-style: none;
+      font-size: 14px;
+      text-align: left;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      border-radius: 3px;
+      -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+      background-clip: padding-box;
+    }
+
+    .navbar-nav>li>.dropdown-menu {
+      margin-top: 0;
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+    }
+
+    .navbar-default .navbar-nav .services-menu,
+    .navbar-default .navbar-nav .solutions-menu {
+      background-color: #303848;
+      padding: 0;
+      border: 0;
+    }
+
+    .open .dropdown-menu {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="jq22-container">
+    <div class="flexslider">
+      <ul class="slides">
+        <li style="background:url(image/4.jpg) 50%  no-repeat;">
+          <div class="hp2">
+            <h2>短视频解决方案重磅上线</h2>
+            <p>小身材大功能,短视频开发从未如此简单</p>
+            <a target="_blank" href="#" class="btn btn-hollow">查看详情</a>
+          </div>
+          <img class="hold" src="./image/3.png" alt="">
+        </li>
+        <li style="background:url(image/1.jpg) 50% no-repeat;"></li>
+        <li style="background:url(image/2.jpg) 50% no-repeat;">
+          <div class="hhp2">
+            <h2>七牛推出</h2>
+            <h2 style="display: -webkit-inline-box;background-color: rgb(34, 104, 196);">私有云存储解决方案</h2>
+            <p>能够针对企业客户场景进行灵活地部署和运维</p>
+            <a target="_blank" href="#" class="btn btn-hollow">点击咨询</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="navbar navbar-inverse navbar-fixed-top site-navbar" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+        <a class="navbar-brand" href="#">
+            <img style="width:125px;height:29px;"src="./image/logo.png" alt="">
+        </a>
+      </div>
+
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav" style="margin-top:7px">
+          <li> <a href="#" class="dropdown-toggle dropdown-toggle-mobile" data-hover="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">产品</a>
+            <ul class="dropdown-menu services-menu">
+              <li class="menu-title hidden-xs">基础服务</li>
+              <li class="service"><a href="/products/kodo"><h4 class="kodo">对象存储</h4><p class="hidden-xs">高可用、易扩展、低成本、一站式</p></a></li>
+              <li class="service"><a href="/products/fusion"><h4 class="fusion">融合 CDN</h4><p class="hidden-xs">融合优质节点、可监控、智能调度的内容分发服务</p></a></li>
+              <li class="service"><a href="/products/kirk"><h4 class="kirk">容器云 <small>(即将上线)</small></h4><p class="hidden-xs">面向微服务架构的企业级容器管理平台</p></a></li>
+              <li class="menu-title hidden-xs">数据•智能</li>
+              <li class="service"><a href="/products/atlab"><h4 class="atlab">深度学习平台</h4><p class="hidden-xs">针对图片视频的一站式数据集中处理、模型训练平台</p></a></li>
+              <li class="service"><a href="/products/pandora"><h4 class="pandora">大数据</h4><p class="hidden-xs">简单、高效、开放</p></a></li>
+              <li class="service"><a href="/products/dora"><h4 class="dora">智能多媒体 API</h4><p class="hidden-xs">针对海量图片视频提供鉴黄鉴暴、人脸技术、物体识别等服务</p></a></li>
+              <li class="menu-title hidden-xs">视频服务</li>
+              <li class="service"><a href="/products/pili"><h4 class="pili">直播云</h4><p class="hidden-xs">提供全球化实时流服务和端到端直播场景解决方案</p></a></li>
+              <li class="service"><a href="/products/vance"><h4 class="vance">点播云</h4><p class="hidden-xs">提供上传、存储、转码分发、播放器等服务的一站式点播服务</p></a></li>
+            </ul>
+          </li>
+
+          </li>
+          <li><a href="#" class="dropdown-toggle dropdown-toggle-mobile" id="solution-dropdown-title" data-hover="dropdown" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false">解决方案</a>
+            <ul class="dropdown-menu solutions-menu">
+              <li class="solution"><a href="/solutions#QOS"><h4 class="QOS menu-title">私有云存储解决方案</h4><p class="hidden-xs">可定制化的数百 PB 级别、高可靠、强安全的存储系统</p></a></li>
+              <li class="solution"><a href="/solutions#UDMP"><h4 class="UDMP menu-title">非结构化数据管理解决方案</h4><p class="hidden-xs">提供大批量文件打包上传、文档检索、多媒体数据处理等服务</p></a></li>
+              <li class="solution"><a href="/solutions#PLSV"><h4 class="PLSV menu-title">短视频解决方案</h4><p class="hidden-xs">集成完整云端能力及卓越采集端、播放端功能的一站式短视频解决方案</p></a></li>
+              <li class="solution"><a href="/solutions#ICA"><h4 class="ICA menu-title">智能云相册解决方案</h4><p class="hidden-xs">满足各场景照片智能分类需求，提供与手机ROM深度定制服务</p></a></li>
+              <li class="solution"><a href="/solutions#IHAIOT"><h4 class="IHAIOT menu-title">智能硬件与物联网解决方案</h4><p class="hidden-xs">满足智能硬件厂商各应用场景下云端计算需求</p></a></li>
+              <li class="solution"><a href="/solutions#RTMI"><h4 class="RTMI menu-title">广电传媒解决方案</h4><p class="hidden-xs">满足传统媒体向融合媒体转型需求，构建全媒体资源管理系统</p></a></li>
+              <li class="solution"><a href="/solutions#HST"><h4 class="HST menu-title">安防解决方案</h4><p class="hidden-xs">灵活部署，满足不同安防场景互联网远程监控需求</p></a></li>
+              <li class="solution"><a href="/solutions#Internet"><h4 class="Internet menu-title">互联网与移动互联网解决方案</h4><p class="hidden-xs">为互联网初创企业量身定制，一站式云计算服务平台</p></a></li>
+              <li class="solution"><a href="/solutions#DQM"><h4 class="DQM menu-title">应用质量监控解决方案</h4><p class="hidden-xs">满足移动及视频应用性能管理需求，可定制化的质量监控平台</p></a></li>
+            </ul>
+          </li>
+          <li><a href="#">价格</a>
+          </li>
+          <li><a href="#">关于我们</a>
+        </ul>
+        <ul class="nav navbar-nav navbar-right navbar-nav-mobile" style="margin-top:7px">
+          </li>
+          <li><a href="#">管理控制台</a>
+          </li>
+          <li><a href="#">开发者中心</a>
+          </li>
+          <li><a href="#">热门活动</a>
+          </li>
+          <li>
+            <div class="actions">
+              <a target="_blank" href="#" class="btn btn-hollow">登录</a>
+              <a target="_blank" href="#" class="btn btn-primary">注册有礼</a>
+            </div>
+          </li>
+        </ul>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="features">
+    <div class="container">
+      <div class="intro">
+        <h2 class="title">持续挖掘海量数据的无限价值</h2>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="media">
+            <div class="media-left">
+              <img class="media-object" alt="海量存储" src="./image/e.png" />
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading">海量存储</h4>
+              <p>所有数据都有有效期，面对不断膨胀的数据领域，数据如何管理？七牛云完全自主知识产权的对象存储，已经过最严酷的考验，为 EB 规模的数据存储做好充分准备。</p>
+              <p>
+                <a class="icon icon-storage" href="#">对象存储</a>
+                <a class="icon icon-databass" href="#">时序数据库</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <div class="media">
+            <div class="media-left">
+              <img class="media-object" alt="数据洞察" src="./image/f.png" />
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading">数据洞察</h4>
+              <p>让数据从负担变成资产的关键步骤是数据的价值挖掘。七牛云提供的大数据产品集和机器学习产品集可以帮助您以最佳的方式理解自己的资产。</p>
+              <p>
+                <a class="icon icon-machine-learning" href="#">深度学习平台</a>
+                <a class="icon icon-xspark" href="#">Spark 服务</a>
+                <a class="icon icon-bigdata" href="#">大数据平台</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <div class="media">
+            <div class="media-left">
+              <img class="media-object" alt="加速传输" src="./image/g.png" />
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading">加速传输</h4>
+              <p>七牛云独家的融合 CDN 结合了主流 CDN 和自建 CDN 节点的优势，让您能够在性能和成本之间得到一个最佳的平衡。</p>
+              <p>
+                <a class="icon icon-dora" href="#">融合 CDN</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <div class="media">
+            <div class="media-left">
+              <img class="media-object" alt="高性能计算" src="./image/h.png" />
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading">高性能计算</h4>
+              <p>为了能让数据流转，我们需要对数据进行高速处理。七牛云构建了基于容器的计算平台，并基于容器平台构建了功能丰富且开放性的智能媒体云平台。您只需考虑怎么处理数据，而无需考虑数据的规模和系统性能。</p>
+              <p>
+                <a class="icon icon-media" href="#">智能多媒体 API</a>
+                <a class="icon icon-container" href="#">容器云</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="features features-solution">
+    <div class="container">
+      <div class="intro">
+        <h2 class="title">一站式视频点播和直播解决方案</h2>
+        <p class="desc">集成存储与融合 CDN，汇聚七牛强大的数据处理能力，提供直播、录制、转码、发布、加速、播放等一站式视频直播、点播服务。</p>
+        <p class="desc">
+          <a class="icon icon-streaming" href="#">点播云</a> <a class="icon icon-video" href="#">直播云</a> </p>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <div class="thumbnail">
+            <img class="media-object media-object-index" width="120" alt="流畅" src="./image/d.png" />
+            <div class="caption caption-index">
+              <h4 class="caption-title">流畅</h4>
+              <p>视频方案的基础在于播放的流畅性。七牛云从推流端到播放端每一个环节都进行了极致的流畅性优化。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="thumbnail">
+            <img class="media-object media-object-index" width="120" alt="高效" src="./image/c.png" />
+            <div class="caption caption-index">
+              <h4 class="caption-title">高效</h4>
+              <p>提供端到端的完整方案，让原有需要超过六个月的产品开发工作简化到一个月内就可完成上线。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="thumbnail">
+            <img class="media-object media-object-index" width="120" alt="低成本" src="./image/b.png" />
+            <div class="caption caption-index">
+              <h4 class="caption-title">低成本</h4>
+              <p>我们采用了各种可靠的技术方式，包括内容压缩、P2P 传输、H.265 编码、自适应码流等手段来降低成本。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="thumbnail">
+            <img class="media-object media-object-index" width="120" alt="可控" src="./image/a.png" />
+            <div class="caption caption-index">
+              <h4 class="caption-title">可控</h4>
+              <p>充分发挥大数据和机器学习的优势，以最实时的方式监测服务质量，并能以开放的方式进行深度的业务分析。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="helper">
+    <a id="waiter" data-toggle="modal" data-target="#feedback-modal">
+    <img src="./image/i.png" />
+      <span>服务&bull;咨询</span>
+  </a>
+    <a class="close-btn" href="">
+    <img src="./image/j.png" alt="Close" /></a>
+  </div>
+
+
+  <div class="features features-hotnews">
+    <div class="container">
+      <div class="intro">
+        <h2 class="title">热门动态</h2>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <ul class="list">
+            <li class="hot hotnews-title"><a href="/news">新闻动态</a></li>
+            <li class="hotnews-title"><a href="/product_news">产品动态</a></li>
+            <li class="hotnews-title"><a href="/welfares">近期福利</a></li>
+            <li><a class="more" href="/news">更多内容 &gt;</a></li>
+          </ul>
+        </div>
+
+        <div class="col-sm-9">
+          <div class="row">
+            <div class="col-sm-6 col-md-4">
+              <div class="hotnews-box">
+                <a href="" target="_blank">
+                  <img class="" alt="图片加载中" src="./image/10.png" />
+                  <div class="infobox">
+                    <div><time>2017 年 8 月 28 日发布在 新闻动态</time><p>七牛云完成新一轮 10 亿元融资，阿里集团与云锋基金领投！</p></div>                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <div class="hotnews-box">
+                <a href="" target="_blank">
+                  <img class="" alt="图片加载中" src="./image/11.png" />
+                  <div class="infobox">
+                    <div><time>2017 年 6 月 5 日发布在 新闻动态</time><p>七牛云 CEO 许式伟当选「上海十大互联网创业家」</p></div>                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+              <div class="hotnews-box">
+                <a href="" target="_blank">
+                  <img class="" alt="图片加载中" src="./image/12.png" />
+                  <div class="infobox">
+                    <div><time>2017 年 5 月 23 日发布在 新闻动态</time><p>七牛云：深度挖掘数据价值 形成竞争壁垒</p></div>                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="stripe stripe-blue p-xxl">
+    <h3 class="text-center">
+      注册七牛云账户，即刻享受多款产品免费额度套餐
+    </h3>
+    <div class="text-center"><a href="#" class="btn btn-lg btn-hollow around-xl" target="_blank">马上免费注册</a></div>
+  </div>
+
+
+  <!-- Modal -->
+  <div class="modal fade alert-modal-css form-wrapper" id="feedback-modal" tabindex="-1" role="dialog" aria-labelledby="feedback-modal-label" data-keyboard="false" data-backdrop="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="feedback-modal-label">产品及服务咨询</h4>
+        </div>
+        <div class="modal-body">
+          <div id="feedback-alert" class="alert alert-success" style="display: none;"></div>
+          <div class="tips text-center">
+            此表单仅用于产品及服务售前咨询（您也可以拨打400-808-9176转2）<br /> 如有售后技术咨询，请
+            <a class="more underline" href="#">提交工单</a> </div>
+
+          <form class="form-horizontal" id="feedback-form" action="/feedbacks?t=248e1af4-3758-4af6-9bd7-cace1602cf23" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="LHHZFAkybZas1oMl6cUtQ8cC5yz0e88QKT3RWbPHaXnVPQeamwln+jU17Xu7FOsjDhw6kr1YbDGnu63wncON4g==" />
+            <input value="#" type="hidden" name="feedback[referer]" id="feedback_referer" />
+            <div class="form-group">
+              <label for="feedback-content" class="col-sm-2 control-label">咨询内容<small class="text-danger">*</small></label>
+              <div class="col-sm-10">
+                <textarea maxLength="255" class="form-control" id="feedback-content" validate="true" name="feedback[content]" cols="" rows="5">
+</textarea>
+                <div class="div-error">
+                  <label for="" class="error-label">请填写咨询内容</label>
+                </div>
+                <div class="maxLength-tips">
+                  <label for="" class="maxLength-label">最多可输入255字</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="feedback-name" class="col-sm-2 control-label">姓名<small class="text-danger">*</small></label>
+              <div class="col-sm-10">
+                <input class="form-control" id="feedback-name" validate="true" type="text" name="feedback[name]" />
+                <div class="div-error">
+                  <label for="" class="error-label">请填写姓名</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="feedback-company" class="col-sm-2 control-label">公司名称</label>
+              <div class="col-sm-10">
+                <input class="form-control" id="feedback-company" type="text" name="feedback[company]" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="feedback-city" class="col-sm-2 control-label">省份<small class="text-danger">*</small></label>
+              <div class="col-sm-10" id="province_city" data-required="true">
+                <select name="feedback[province]" id="province" class="province form-control" data-value="北京" data-required="true"></select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="feedback-phone" class="col-sm-2 control-label">联系电话<small class="text-danger">*</small></label>
+              <div class="col-sm-10">
+                <input class="form-control" id="feedback-phone" validate="true" type="tel" name="feedback[phone]" />
+                <div class="div-error">
+                  <label for="" class="error-label">请以正确的格式填写联系电话</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="feedback-email" class="col-sm-2 control-label">电子邮箱<small class="text-danger">*</small></label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control" id="feedback-email" validate="true" name="feedback[email]" />
+                <div class="div-error">
+                  <label for="" class="error-label">请填写电子邮箱</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="actions">
+              <button name="button" type="submit" class="btn btn-primary" id="feedback-submit" disabled="disabled" data-disable-with="正在提交中...">提 交</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="hidden-xs">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8">
+          <div class="row grey-link">
+            <div class="col-sm-4 col-xs-4">
+              <dl>
+                <dt>产品与服务</dt>
+                <dd><a href="/products/kodo">对象存储</a></dd>
+                <dd><a href="/products/fusion">融合 CDN</a></dd>
+                <dd><a href="/products/kirk">容器云 <small>(即将上线)</small></a></dd>
+                <dd><a href="/products/atlab">深度学习平台</a></dd>
+                <dd><a href="/products/pandora">大数据</a></dd>
+                <dd><a href="/products/dora">智能多媒体 API</a></dd>
+                <dd><a href="/products/pili">直播云</a></dd>
+                <dd><a href="/products/vance">点播云</a></dd>
+              </dl>
+            </div>
+            <div class="col-sm-4 col-xs-4">
+              <dl>
+                <dt>支持</dt>
+                <dd><a target="_blank" href="#">开发者中心</a></dd>
+                <dd><a target="_blank" href="#">技术支持</a></dd>
+                <dd><a target="_blank" href="#">问答社区</a></dd>
+                <dd><a href="/events">热门活动</a></dd>
+                <dd><a id="report" href="#">违规内容举报</a></dd>
+                <dd><a target="_blank" href="#">工单系统</a></dd>
+                <dd><a target="blank" href="#">技术博客</a></dd>
+              </dl>
+            </div>
+            <div class="col-sm-4 col-xs-4">
+              <dl>
+                <dt>关于我们</dt>
+                <dd><a href="/company">公司介绍</a></dd>
+                <dd><a href="/news">新闻动态</a></dd>
+                <dd><a href="/product_news">产品动态</a></dd>
+                <dd><a href="/welfares">近期福利</a></dd>
+                <dd><a target="_blank" href="#">品牌标识</a></dd>
+                <dd><a href="/case">客户案例</a></dd>
+                <dd><a href="/cooperations">市场合作</a></dd>
+                <dd><a target="_blank" href="#">加入我们</a></dd>
+                <dd><a href="/contact">联系我们</a></dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 text-center">
+          <a class="logo" href="/"><img alt="七牛云" style="width: 140px;"src="./image/b1.png" /></a>
+          <div class="qrcode">
+            <img src="./image/b2.png" style="width: 100px;" alt="Weixin qrcode" /> </div>
+          <div class="sns">
+            <a class="github" href="#" target="_blank"></a>
+            <a class="weibo" href="#" target="_blank"></a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="links grey-link">
+        <div class="cloud-verify">
+          <a target="_blank" rel="noopener" href="#" class="verify-logo" title="可信云"></a>
+          <a target="_blank" rel="noopener" href="#" class="iso-logo" title="iso"></a>
+        </div>
+        <ul>
+          <li>
+            <div class="copyright grey-color">© 2017 七牛云</div>
+          </li>
+          <li><a href="/user-agreement">用户协议</a></li>
+          <li><a href="/sla-kodo">SLA</a></li>
+        </ul>
+        <div class="icp grey-color">
+          <a href="#" target="_blank"><span class="icon icon-aq">沪公网安备 31011502000961 号</span></a>
+          <a href="#" target="_blank"><span>沪 ICP 备 11037377 号-5</span></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <footer class="visible-xs footer-mobile">
+    <div class="container">
+      <div class="collapse-wrapper">
+        <ul class="panel-group" id="accordion">
+          <li class="panel panel-info">
+            <div class="panel-heading panel-sort">
+              <a class="sort-name" data-toggle="collapse" data-parent="#accordion" href="#collapseProduct">产品</a>
+            </div>
+
+            <div id="collapseProduct" class="panel-collapse collapse collapse-menu">
+              <div class="panel-body panel-menu">
+                <div class="menu-unit"><a href="/products/kodo"><h4 class="kodo">对象存储</h4></a></div>
+                <div class="menu-unit"><a href="/products/fusion"><h4 class="fusion">融合 CDN</h4></a></div>
+                <div class="menu-unit"><a href="/products/kirk"><h4 class="kirk">容器云 <small>(即将上线)</small></h4></a></div>
+                <div class="menu-unit"><a href="/products/atlab"><h4 class="atlab">深度学习平台</h4></a></div>
+                <div class="menu-unit"><a href="/products/pandora"><h4 class="pandora">大数据</h4></a></div>
+                <div class="menu-unit"><a href="/products/dora"><h4 class="dora">智能多媒体 API</h4></a></div>
+                <div class="menu-unit"><a href="/products/pili"><h4 class="pili">直播云</h4></a></div>
+                <div class="menu-unit"><a href="/products/vance"><h4 class="vance">点播云</h4></a></div>
+              </div>
+            </div>
+          </li>
+          <li class="panel panel-info">
+            <div class="panel-heading panel-sort">
+              <a class="sort-name" data-toggle="collapse" data-parent="#accordion" href="#collapseSupport">支持</a>
+            </div>
+
+            <div id="collapseSupport" class="panel-collapse collapse collapse-menu">
+              <div class="panel-body panel-menu">
+                <div class="menu-unit">
+                  <a href="#" target="_blank">
+                    <h4>开发者中心</h4>
+                  </a>
+                </div>
+                <div class="menu-unit">
+                  <a href="#" target="_blank">
+                    <h4>技术支持</h4>
+                  </a>
+                </div>
+                <div class="menu-unit">
+                  <a href="#" target="_blank">
+                    <h4>问答社区</h4>
+                  </a>
+                </div>
+                <div class="menu-unit"><a href="/events"><h4>热门活动</h4></a></div>
+                <div class="menu-unit">
+                  <a href="#" id="report">
+                    <h4>违规内容举报</h4>
+                  </a>
+                </div>
+                <div class="menu-unit">
+                  <a href="#" target="_blank">
+                    <h4>工单系统</h4>
+                  </a>
+                </div>
+                <div class="menu-unit">
+                  <a href="#" target="_blank">
+                    <h4>技术博客</h4>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="panel panel-info">
+            <div class="panel-heading panel-sort">
+              <a class="sort-name" data-toggle="collapse" data-parent="#accordion" href="#collapseUs">关于我们</a>
+            </div>
+            <div id="collapseUs" class="panel-collapse collapse collapse-menu">
+              <div class="panel-body panel-menu">
+                <div class="menu-unit"><a href="/news"><h4>新闻动态</h4></a></div>
+                <div class="menu-unit"><a href="/product_news"><h4>产品动态</h4></a></div>
+                <div class="menu-unit"><a href="/welfares"><h4>近期福利</h4></a></div>
+                <div class="menu-unit">
+                  <a href="#" target="_blank">
+                    <h4>品牌标识</h4>
+                  </a>
+                </div>
+                <div class="menu-unit"><a href="/case"><h4>客户案例</h4></a></div>
+                <div class="menu-unit"><a href="/cooperations"><h4>市场合作</h4></a></div>
+                <div class="menu-unit">
+                  <a href="#" target="_blank">
+                    <h4>加入我们</h4>
+                  </a>
+                </div>
+                <div class="menu-unit"><a href="/contact"><h4>联系我们</h4></a></div>
+              </div>
+            </div>
+          </li>
+          <li class="panel panel-info">
+            <div class="panel-heading panel-sort">
+              <a class="sort-name" data-toggle="collapse" data-parent="#accordion" href="#collapseCare">关注我们</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="links grey-link">
+        <div class="cloud-verify">
+          <a target="_blank" rel="noopener" href="#" class="verify-logo" title="可信云"></a>
+          <a target="_blank" rel="noopener" href="#" class="iso-logo" title="iso"></a>
+        </div>
+        <ul>
+          <li>
+            <div class="copyright grey-color">© 2017 七牛云</div>
+          </li>
+          <li><a href="/user-agreement">用户协议</a></li>
+          <li><a href="/sla-kodo">SLA</a></li>
+        </ul>
+        <div class="icp grey-color">
+          <a href="#" target="_blank"><span class="icon icon-aq">沪公网安备 31011502000961 号</span></a>
+          <a href="#" target="_blank"><span>沪 ICP 备 11037377 号-5</span></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="./js/jquery.min.js"></script>
+  <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+  <script src="http://cdn.bootcss.com/bootstrap-hover-dropdown/2.0.10/bootstrap-hover-dropdown.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.flexslider').flexslider({
+        directionNav: false,
+        pauseOnAction: false,
+        slideshowSpeed: 3000,
+        pauseOnHover: true,
+        touch: true,
+      });
+    });
+
+    $(function() {
+      $('[data-toggle="tooltip"]').tooltip()
+    });
+  </script>
+</body>
+
+</html>

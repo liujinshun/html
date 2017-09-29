@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>后代选择器</title>
+    <!-- 后代选择器可以选择作为某元素后代的元素。 -->
+    <style>
+      /*后代选择器以空格作为分隔符*/
+      /*后代选择器相当于一代一代的向下传递,有则传递,没有则不会传递*/
+      div p span {
+        color: red;
+      }
+        /*不止是标签传递,也可以是类*/
+      .one p span {
+        color: green;
+      }
+        /*id传递也是可以的*/
+      #h2id p span {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>
+        <span> div&gt;p&gt;span </span>
+      </p>
+      <span>div &gt; span</span>
+    </div>
+    <div>
+      <p><span>div &gt; p &gt; span</span></p>
+    </div>
+    <div>
+      <p><strong><span> div &gt; p &gt; strong &gt; span</span></strong></p>
+    </div>
+    <span>span</span>
+    <h1 class="one">
+      <p><span> h1 &gt; p &gt; span</span></p>
+    </h1>
+
+    <h2 id="h2id">
+      <p><span>h2 &gt; p &gt; span</span></p>
+    </h2>
+
+  </body>
+</html>

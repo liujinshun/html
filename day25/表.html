@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .c {
+      width: 600px;
+      height: 600px;
+      margin: 0 auto;
+      background-image: url("./clock/clock.jpg");
+      position: relative;
+    }
+
+    .h {
+      position: absolute;
+      transform-origin: center center;
+      left: 285px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="c">
+    <img class="h" src="./clock/hour.png" alt="">
+    <img class="h" src="./clock/minute.png" alt="">
+    <img class="h" src="./clock/second.png" alt="">
+  </div>
+
+
+  <script type="text/javascript">
+      var img = document.getElementsByClassName("c")[0];
+      function clock() {
+      var d = new Date();
+      var a = d.getSeconds();
+      var a1 = a * 6;
+      var b = d.getMinutes();
+      var b1 = (a / 60) * 6 + b * 6;
+      var c = d.getHours();
+      var c1 = (c % 12) * 30 + b / 2;
+      console.log(a, b, c);
+
+
+
+      img.children[2].style.cssText = "transform:rotate(" + a1 + "deg);"
+      img.children[1].style.cssText = "transform:rotate(" + b1 + "deg);"
+      img.children[0].style.cssText = "transform:rotate(" + c1 + "deg);"
+      setTimeout(clock,1000)
+    }
+    clock();
+  </script>
+</body>
+
+</html>

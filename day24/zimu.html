@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+
+  <script type="text/javascript">
+    function asd(str1) {
+      var str = "";
+      for (var i = 0; i < str1.length; i++) {
+        s = str1.charCodeAt(i);
+        if((s >= 97) && (s <= 122)) {
+        str += String.fromCharCode(s);
+        } else if ((s >= 65) && (s <= 90)){
+        str += String.fromCharCode(s + 32);
+        }
+      }
+      return str;
+    }
+
+    function zxc(str2) {
+      var str = "";
+      for (var i = 0; i < str2.length; i++) {
+        s = str2.charCodeAt(i);
+        if ((s >= 97) && (s <= 122)) {
+          str += String.fromCharCode(s - 32);
+        } else if ((s >= 65) && (s <= 90)){
+          str += String.fromCharCode(s);
+        }
+      }
+      return str;
+    }
+
+    console.log(zxc("a s d"));
+    console.log(zxc("A S D"));
+    console.log(asd("A s D"));
+    console.log(asd("a s d"));
+  </script>
+
+</body>
+
+</html>

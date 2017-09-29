@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>尚和</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    a:link {
+      color: #000;
+    }
+
+    ul a.u1 {
+      font-size: 15px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: #000;
+    }
+
+    a:hover {
+      color: green;
+    }
+
+    ul a:link {
+      color: #000;
+    }
+
+    ul a:visited.u1 {
+      color: red;
+    }
+
+    ul a:hover.u1 {
+      color: blue;
+    }
+
+    ul a.u2 {
+      font-size: 15px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    ul a:visited.u2 {
+      color: #c2c2c2;
+    }
+
+    ul a:hover.u2 {
+      color: rgb(176, 198, 89);
+    }
+
+    .w {
+      width: 980px;
+      margin: 0 auto;
+    }
+
+    ul li {
+      list-style: none;
+      float: left;
+      width: 80px;
+    }
+
+    .head_nav {
+      height: 50px;
+      background: #fff;
+      padding: 0px;
+    }
+
+    .bc {
+      height: 55px;
+      background-image: url("./shanghe/nav_bg.png");
+      background-repeat: repeat-x;
+    }
+
+    .logo {
+      height: 40px;
+      float: left;
+      padding-top: 10px;
+    }
+
+    #img {
+      float: right;
+      padding-top: 10px;
+    }
+
+    .bq {
+      width: 163px;
+      float: left;
+      height: 50px;
+      line-height: 50px;
+    }
+
+    .ban {
+      height: 597px;
+      background-image: url("./shanghe/banner.png");
+      background-repeat: no-repeat;
+    }
+
+    .point {
+      height: 20px;
+      background-image: url("./shanghe/point.png");
+      background-repeat: no-repeat;
+      background-position: center top;
+    }
+
+    .one {
+      height: 26px;
+      border-top: 3px solid #c2c2c2;
+      border-bottom: 3px solid #c2c2c2;
+    }
+
+    .bg_1 {
+      height: 20px;
+      float: right;
+      padding-top: 5px;
+    }
+
+    .bian {
+      width: 310px;
+      height: 300px;
+      border: 1px solid #c2c2c2;
+      float: left;
+      margin-top: 10px;
+      margin-left: 10px;
+    }
+
+    .h4 {
+      float: left;
+      padding-left: 18px;
+      padding-top: 10px;
+      color: green;
+    }
+
+    .bc_1 {
+      padding-left: 72px;
+      padding-top: 50px;
+    }
+
+    .ul_1 {
+      padding-top: 10px;
+      width: 800px;
+      margin-left: 33px;
+    }
+
+    .ul_top {
+      line-height: 20px;
+      color: #b4b4b4;
+      font-size: 15px;
+    }
+
+    hr {
+      border-bottom-style: dashed;
+      width: 250px;
+      margin-left: 35px;
+    }
+
+    .fen {
+      margin-top: 40px
+    }
+
+    .color {
+      color: red;
+    }
+
+    .h3 {
+      float: right;
+      font-size: 14px;
+      padding-right: 18px;
+      padding-top: 10px;
+    }
+
+    .ul_2 {
+      padding-top: 10px;
+      width: 700px;
+      margin-left: 50px;
+    }
+
+    .box_title {
+      width: 4px;
+      height: 18px;
+      float: left;
+      color: #fff;
+      border-left: 3px solid green;
+    }
+
+    .ul_3 {
+      padding-top: 40px;
+      width: 250px;
+      margin-left: 50px;
+    }
+
+    .ul_4 {
+      width: 250px;
+      margin-left: 50px;
+    }
+
+    .foot {
+      height: 300px;
+      background-image: url("./shanghe/foot.png");
+      background-repeat: repeat-x;
+    }
+
+    .four {
+      height: 350px;
+    }
+
+    .bottom {
+      width: 116px;
+      float: left;
+      height: 30px;
+      line-height: 30px;
+    }
+
+    .ziti_w {
+      font-size: 15px;
+      color: #fff;
+    }
+
+    .ziti_b {
+      font-size: 10px;
+      color: rgb(100, 101, 101);
+    }
+
+    .c3 {
+      float: right;
+    }
+
+    .zhu {
+      font-size: 3px;
+      height: 10px;
+      float: none;
+      text-align: center;
+      padding-top: 230px;
+    }
+
+    .tao {
+      position: fixed;
+      right: 315px;
+      top: 105px;
+    }
+
+    .new {
+      position: relative;
+      left: -47px;
+      top: -17px;
+    }
+
+    .jing_1 {
+      width: 18px;
+      height: 18px;
+      border: 1px solid #fff;
+      margin: -47px auto;
+      background: url(./shanghe/share.png) -69px -51px;
+      display: inline-block;
+      margin-left: 450px
+    }
+    .jing_2 {
+      width: 18px;
+    height: 18px;
+    border: 1px solid #fff;
+    margin: -29px 87px;
+    background: url(./shanghe/share.png) -46px -51px;
+    display: inline-block;
+    margin-left: 428px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="head_nav w">
+    <div class="logo">
+      <img src="./shanghe/logo.png" alt="">
+    </div>
+    <img id="img" src="./shanghe/input_r1_c2.png" alt="">
+    <img id="img" src="./shanghe/input_r1_c1.png" alt="">
+  </div>
+  <div class="bc">
+    <div class="w">
+      <ul>
+        <li class="bq"><a href="#">首页</a></li>
+        <li class="bq"><a href="#">智能手机<img class="new" src="./shanghe/new.png" alt=""></a></li>
+        <li class="bq"><a href="#">平板电脑</a></li>
+        <li class="bq"><a href="#">配件</a></li>
+        <li class="bq"><a href="#">服务支持</a></li>
+        <li class="bq"><a href="#">关于尚和</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="tao"><img src="./shanghe/taobao.jpg" alt=""></div>
+  <div class="ban w"></div>
+  <div class="point w"></div>
+
+  <div class="one">
+    <div class="w">
+      <span><strong>最新公告:</strong></span>
+      <spqn>尚和智能手机</spqn>
+      <div class="bg_1">
+        <img src="./shanghe/share.png" alt="">
+      </div>
+    </div>
+
+  </div>
+  <div class="w four">
+    <div class="bian">
+      <h4 class="h4"><img src="./shanghe/canvas_r4_c4.png" alt="">新品发布</h4>
+      <img class="bc_1" src="./shanghe/1.png" alt="">
+    </div>
+    <div class="bian">
+      <h4 class="h4"><img src="./shanghe/canvas_r4_c4.png" alt="">新闻中心</h4>
+      <a class="h3" style="color:rgb(67, 70, 69)" href="#">更多</a>
+      <ul class="ul_top fen">
+        <li class="ul_1"><a class="u1" href="#">致歉公告</a></li><br>
+        <hr>
+        <li class="ul_1"><a class="u2" href="#">艾斯德斯大多撒多撒多</a></li><br>
+        <hr>
+        <li class="ul_1"><a class="u2" href="#">艾斯德斯大多撒多撒多</a></li><br>
+        <hr>
+        <li class="ul_1"><a class="u2" href="#">艾斯德斯大多撒多撒多</a></li><br>
+        <hr>
+        <li class="ul_1"><a class="u2" href="#">艾斯德斯大多撒多撒多</a></li><br>
+        <hr>
+        <li class="ul_1"><a class="u2" href="#">艾斯德斯大多撒多撒多</a></li><br>
+        <hr>
+        <li class="ul_1"><a class="u2" href="#">艾斯德斯大多撒多撒多</a></li><br>
+        <hr>
+      </ul>
+    </div>
+    <div class="bian">
+      <h4 class="h4">
+        <img src="./shanghe/canvas_r4_c4.png" alt="">技术与支持
+      </h4>
+      <ul class="ul_top fen">
+        <li class="ul_2">
+          <p class="box_title"></p><a class="u2" href="#">售后服务</a></li><br>
+        <li class="ul_2">
+          <p class="box_title"></p><a class="u2" href="#">售后服务</a></li><br>
+        <li class="ul_2">
+          <p class="box_title"></p><a class="u2" href="#">售后服务</a></li><br>
+        <li class="ul_2">
+          <p class="box_title"></p><a class="u2" href="#">售后服务</a></li><br>
+        <li class="ul_3">深圳市汇聚众和科技有限公司</li>
+        <li class="ul_4">服务热线:200-400-500</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot">
+    <div class="w">
+      <a href="#"><img class="c3" src="./shanghe/canvas_r4_c3.png" alt=""></a>
+      <ul class="bottom">
+        <li class="ziti_w">尚和首页</li><br>
+        <li class="ziti_b">返回首页</li>
+      </ul>
+      <ul class="bottom">
+        <li class="ziti_w">智能手机</li><br>
+        <li class="ziti_b">返回首页</li>
+        <li class="ziti_b">返回首页</li>
+      </ul>
+      <ul class="bottom">
+        <li class="ziti_w">平板电脑</li><br>
+        <li class="ziti_b">返回首页</li>
+        <li class="ziti_b">返回首页</li>
+        <li class="ziti_b">返回首页</li>
+        <li class="ziti_b">返回首页</li>
+      </ul>
+      <ul class="bottom">
+        <li class="ziti_w">配件中心</li><br>
+        <li class="ziti_b">返回首页</li>
+      </ul>
+      <ul class="bottom">
+        <li class="ziti_w">服务与支持</li><br>
+        <li class="ziti_b">返回首页</li>
+        <li class="ziti_b">返回首页</li>
+        <li class="ziti_b">返回首页</li>
+        <li class="ziti_b">返回首页</li>
+      </ul>
+      <ul class="bottom">
+        <li class="ziti_w">关于我们</li><br>
+        <li class="ziti_b">返回首页</li>
+      </ul>
+      <ul class="bottom">
+        <li class="ziti_w">新闻中心</li><br>
+        <li class="ziti_b">返回首页</li>
+        <li class="ziti_b">返回首页</li>
+        <li class="ziti_b">返回首页</li>
+        <li class="ziti_b">返回首页</li>
+      </ul>
+      <ul class="bottom">
+        <li class="ziti_w">常用链接</li><br>
+        <li class="ziti_b">返回首页</li>
+        <li class="ziti_b">返回首页</li>
+        <li class="ziti_b">返回首页</li>
+        <li class="ziti_b">返回首页</li>
+      </ul>
+    </div>
+    <div class="zhu w">
+      <p>京ICP证080047号[京ICP备08010314号-6] 文网文[2009]024号 新出网证（京）字069号 工商营业执照</p><br>
+      <p>京公网安备 11000002000006号</p>
+    </div>
+    <div class="w">
+    <a class="jing_1" href="#"></a>
+<a class="jing_2" href="#"></a>
+</div>
+  </div>
+
+
+
+</body>
+
+</html>

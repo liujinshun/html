@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .w {
+      width: 600px;
+      margin: 0 auto;
+    }
+
+    .bor {
+      margin-top: 22px;
+      margin-left: 48px;
+      float: left;
+      width: 100px;
+      height: 100px;
+      background: #fff;
+      box-shadow: 2px 2px 8px gray;
+    }
+
+    .a {
+      margin: 10px;
+      box-sizing: border-box;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 1px solid red;
+    }
+
+    .b {
+      margin: 10px;
+      box-sizing: border-box;
+      width: 80px;
+      height: 80px;
+      border-radius: 50% 50% 0px 0px;
+      border: 1px solid red;
+    }
+
+    .c {
+      box-sizing: border-box;
+      width: 80px;
+      height: 40px;
+      border-radius: 50px 50px 0px 0px;
+      border: 1px solid red;
+      margin-left: 10px;
+      margin-top: 25px;
+    }
+
+    .d {
+      margin: 10px;
+      box-sizing: border-box;
+      width: 80px;
+      height: 80px;
+      border-radius: 50% 0px 0px 0px;
+      border: 1px solid red;
+    }
+
+    .e {
+      box-sizing: border-box;
+      width: 50px;
+      height: 50px;
+      border-radius: 50px 0px 0px 0px;
+      border: 1px solid red;
+      margin-left: 20px;
+      margin-top: 20px;
+    }
+
+    .f {
+      box-sizing: border-box;
+      width: 80px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid red;
+      margin-top: 26px;
+      margin-left: 10px;
+    }
+
+    .g {
+      box-sizing: border-box;
+      width: 40px;
+      height: 80px;
+      border-radius: 50%;
+      border: 1px solid red;
+      margin-left: 29px;
+      margin-top: 9px;
+    }
+
+    .h {
+      box-sizing: border-box;
+      width: 80px;
+      height: 28px;
+      border-radius: 50% / 100% 100% 0 0;
+      border: 1px solid red;
+      margin-top: 26px;
+      margin-left: 10px;
+    }
+
+    .i {
+      box-sizing: border-box;
+      width: 26px;
+      height: 80px;
+      border-radius: 100% 0px 0px 100% / 50%;
+      border: 1px solid red;
+      margin-left: 29px;
+      margin-top: 9px;
+    }
+
+    .j {
+      box-sizing: border-box;
+      width: 26px;
+      height: 80px;
+      border-radius: 100% 0px 0px 0px;
+      border: 1px solid red;
+      margin-left: 29px;
+      margin-top: 9px;
+    }
+
+    .k {
+      margin: 10px;
+      box-sizing: border-box;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 30px solid red;
+    }
+
+    .l {
+      margin: 10px;
+      box-sizing: border-box;
+      width: 80px;
+      height: 80px;
+      border-radius: 34%;
+      border: 30px solid red;
+    }
+
+    .m {
+      margin: 10px;
+      box-sizing: border-box;
+      width: 80px;
+      height: 80px;
+      border-radius: 50% 0 0 0;
+      border: 30px solid red;
+    }
+
+    .n {
+      margin: 10px;
+      box-sizing: border-box;
+      width: 80px;
+      height: 80px;
+      border-radius: 50% 0 50% 0;
+      border: 30px solid red;
+    }
+
+    .o {
+      border-width: 45px;
+          border-style: solid;
+          border-color: red blue green yellow;
+          margin: 6px;
+    }
+
+    .p {
+      border-width: 45px;
+          border-style: solid;
+          border-color: red #fff green yellow;
+          margin: 6px;
+    }
+
+    .q {
+      border-width: 45px;
+      border-style: dashed;
+      border-color: red #fff red red;
+      margin: 6px;
+      border-radius: 50%;
+    }
+
+    .r {
+      border-width: 45px;
+      border-style: dashed;
+      border-color:  #fff red #fff #fff;
+      margin: 6px;
+      border-radius: 50%;
+    }
+
+    .s {
+      width: 100px;
+      height: 50px;
+      background: green;
+      border-color: red;
+      border-style: solid;
+      border-width: 0px 0px 50px 0px;
+      border-radius: 100%;
+      position: relative;
+    }
+
+    .t {
+      width: 100px;
+      height: 50px;
+      background: green;
+      border-color: red;
+      border-style: solid;
+      border-width: 0px 0px 50px 0px;
+      border-radius: 100%;
+      position: relative;
+    }
+
+    .u {
+      width: 100px;
+      height: 50px;
+      background: green;
+      border-color: red;
+      border-style: solid;
+      border-width: 0px 0px 50px 0px;
+      border-radius: 100%;
+      position: relative;
+    }
+
+    #yin-yang:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      background: green;
+      border: 18px solid red;
+      border-radius: 100%;
+      width: 14px;
+      height: 14px;
+    }
+
+    #yin-yang:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background: red;
+      border: 18px solid green;
+      border-radius: 100%;
+      width: 14px;
+      height: 14px;
+    }
+
+      .v {
+        box-sizing: border-box;
+        width: 80px;
+        height: 50px;
+        border-radius: 12px 12px 12px 12px;
+        margin-top: 26px;
+        margin-left: 10px;
+        background: red;
+      }
+
+    .v::after {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 0px;
+      border-width: 10px;
+      border-style: solid;
+      border-color: transparent;
+      border-right-color: red;
+      position: relative;
+      top: 7px;
+      left: -35px;
+    }
+
+    .w {
+
+    }
+
+    .x {
+      margin-top: 20px;
+      margin-left: 7px;
+      width: 90px;
+      height: 45px;
+      box-sizing: border-box;
+      border-radius: 24% 40px 40px 24%;
+      border: 30px solid red;
+    }
+
+    #x-1:after {
+      position: absolute;
+          content: "";
+          margin-top: -11px;
+          margin-left: 4px;
+          width: 47px;
+          height: 22px;
+          box-sizing: border-box;
+          border-radius: 0px 40px 40px 0px;
+          border: 11px solid #fff;
+    }
+
+    .y {
+
+    }
+
+    .z {
+      box-sizing: border-box;
+      width: 80px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid red;
+      margin-top: 26px;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="w">
+    <div class="bor">
+      <div class="a"></div>
+    </div>
+    <div class="bor">
+      <div class="b"></div>
+    </div>
+    <div class="bor">
+      <div class="c"></div>
+    </div>
+    <div class="bor">
+      <div class="d"></div>
+    </div>
+    <div class="bor">
+      <div class="e"></div>
+    </div>
+    <div class="bor">
+      <div class="f"></div>
+    </div>
+    <div class="bor">
+      <div class="g"></div>
+    </div>
+    <div class="bor">
+      <div class="h"></div>
+    </div>
+    <div class="bor">
+      <div class="i"></div>
+    </div>
+    <div class="bor">
+      <div class="j"></div>
+    </div>
+    <div class="bor">
+      <div class="k"></div>
+    </div>
+    <div class="bor">
+      <div class="l"></div>
+    </div>
+    <div class="bor">
+      <div class="m"></div>
+    </div>
+    <div class="bor">
+      <div class="n"></div>
+    </div>
+    <div class="bor">
+      <div class="o"></div>
+    </div>
+    <div class="bor">
+      <div class="p"></div>
+    </div>
+    <div class="bor">
+      <div class="q"></div>
+    </div>
+    <div class="bor">
+      <div class="r"></div>
+    </div>
+    <div class="bor">
+      <div class="s"></div>
+    </div>
+    <div class="bor">
+      <div class="t"></div>
+    </div>
+    <div class="bor">
+      <div class="u" id="yin-yang"></div>
+    </div>
+    <div class="bor">
+      <div class="v"></div>
+    </div>
+    <div class="bor">
+      <div class="w"></div>
+    </div>
+    <div class="bor">
+      <div class="x" id="x-1"></div>
+    </div>
+    <div class="bor">
+      <div class="y"></div>
+    </div>
+    <div class="bor">
+      <div class="z"></div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

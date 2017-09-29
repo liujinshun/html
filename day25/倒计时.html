@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style media="screen">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .sss {
+      font-size: 56px;
+      background: rgba(85, 65, 250, 0.8);
+      text-align: center;
+    }
+  </style>
+</head>
+
+
+  <!-- 页面加载之后立即执行一段 JavaScript -->
+<body onload="countTime()">
+
+
+  <div class="sss">
+    距离国庆假期还有:
+    <span id="d"></span>
+    <span id="h"></span>
+    <span id="m"></span>
+    <span id="s"></span>
+  </div>
+
+  <script>
+    function countTime() {
+
+      var endTime = new Date("2017-09-30 22:45:00 ");
+      var statTime = new Date();
+      var stime = endTime - statTime;
+
+      var d = Math.floor(stime / 1000 / 60 / 60 / 24);
+      var h = Math.floor(stime / 1000 / 60 / 60 % 24);
+      var m = Math.floor(stime / 1000 / 60 % 60);
+      var s = Math.floor(stime / 1000 % 60);
+
+      document.getElementById("d").innerHTML = d + "天";
+      document.getElementById("h").innerHTML = h + "时";
+      document.getElementById("m").innerHTML = m + "分";
+      document.getElementById("s").innerHTML = s + "秒";
+
+      setTimeout(countTime, 1000);
+
+    }
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title></title>
+
+</head>
+
+<body>
+
+  <form action="#">
+
+    <table>
+
+      <tr>
+        <td>邮箱：<input type="text" id=email></td>
+        <td><span id=myspan style="text-size:18pt;color:red;"></span></td>
+      </tr>
+
+      <tr>
+        <td><input type="submit" value="提交" onclick="return checkEmail()" /></td>
+        <td></td>
+      </tr>
+      </table>
+    </form>
+
+  <script type="text/javascript">
+    function checkEmail() {　　
+      var myforms = document.forms;　　
+      var myemail = myforms[0].email.value;　　
+      var myReg = /^[a-zA-Z0-9_-]+@([a-zA-Z0-9]+\.)+(com|cn|net|org)$/;
+
+      　　
+      if (myReg.test(myemail)) {
+        myspan.innerText = "邮箱格式正确!";　　　　
+        return true;　　
+      } else {　　　　
+        myspan.innerText = "邮箱格式不对!";　　　　
+        return false;
+      }
+    }
+  </script>
+</body>
+
+</html>

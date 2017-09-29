@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>京东</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .body {
+      background-color: #f6f6f6;
+    }
+
+    .w {
+      width: 1250px;
+      margin: 0 auto;
+    }
+
+    .head_1 {
+      height: 80px;
+      background: #190400;
+    }
+
+    .head {
+      height: 80px;
+      background: url("./images/02.jpg") no-repeat 50% 0;
+    }
+
+    .head_2 {
+      border-bottom: 30px solid #e3e4e5;
+    }
+
+    .head_3 {
+      background: url("./images/logo.png") no-repeat;
+      position: relative;
+      height: 175px;
+      width: 200px;
+    }
+
+    .head_4 {
+      background: rgb(255, 255, 255);
+      width: 200px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    a {
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    a:link {
+      color: rgb(91, 91, 91);
+    }
+
+    a:visited {
+      color: rgb(91, 91, 91);
+    }
+
+    a:hover {
+      color: red;
+    }
+
+    .bei {
+      padding-left: 203px;
+      display: inline-block;
+      width: 65px;
+      height: 33px;
+      line-height: 33px;
+    }
+
+    ul li {
+      list-style: none;
+      float: left;
+    }
+
+    .biao {
+      float: right;
+      width: 77px;
+      height: 33px;
+      line-height: 33px;
+      font-size: 13px;
+    }
+
+    .bor_1 {
+      float: right;
+      margin-top: 75px;
+      margin-right: -276px;
+      width: 490px;
+      height: 33px;
+      border: 1px solid #f10215;
+      line-height: 33px;
+    }
+
+    .bor_2 {
+      float: right;
+      margin-top: 75px;
+      margin-right: -326px;
+      width: 50px;
+      height: 35px;
+      line-height: 35px;
+      background-image: url("./images/06.png");
+    }
+
+    .bor_3 {
+      float: right;
+      margin-top: 75px;
+      margin-right: -593px;
+      width: 189px;
+      height: 33px;
+      border: 1px solid red;
+      line-height: 33px;
+    }
+
+    .bor_3_1 {
+      background: #fff;
+      width: 189px;
+      height: 32px;
+    }
+
+    .bor_1_1 {
+      background: #fff;
+      width: 490px;
+      height: 32px;
+    }
+
+    .cat {
+      color: red;
+      text-align: center;
+    }
+
+    .img_1 {
+      position: relative;
+      left: -3px;
+      top: 3px;
+    }
+
+    .img_2 {
+      position: relative;
+      right: -460px;
+      top: 5px;
+    }
+
+    a:visited.biao_1 {
+      color: #c2c2c2;
+    }
+
+    a:link.biao_1 {
+      color: #c2c2c2;
+    }
+
+    a:link.biao_2 {
+      color: #c2c2c2;
+    }
+
+    a:hover.biao_2 {
+      color: red;
+    }
+
+    .biao_1 {
+      font-size: 12px;
+    }
+
+    .biao_3 {
+      float: right;
+      margin-top: 139px;
+      margin-right: -585px;
+      width: 667px;
+      height: 33px;
+      border: 1px solid #f6f6f6;
+      line-height: 33px;
+    }
+
+    .biao_3_1 {
+      font-size: 18px;
+      height: 33px;
+      line-height: 36px;
+      padding-left: 20px;
+    }
+
+    .img_3 {
+      position: relative;
+      top: -42px;
+      right: -803px;
+    }
+
+    .bc_1 {
+      position: relative;
+      top: 145px;
+      float: left;
+      background-color: #6e6568;
+      width: 200px;
+      height: 482px;
+    }
+
+    .bcs {
+      float: right;
+      margin-top: 0px;
+      margin-right: 248px;
+      width: 790px;
+      height: 482px;
+      border: 1px solid #f6f6f6;
+      line-height: 33px;
+    }
+
+    a:link.bor_4 {
+      color: #fff;
+    }
+
+    a:visited.bor_4 {
+      color: #fff;
+    }
+
+    a:hover.bor_4 {
+      color: red;
+    }
+
+    .bor_4_1 {
+      float: left;
+      font-size: 15px;
+      height: 30px;
+      text-indent: 1em;
+      line-height: 30px;
+    }
+
+    .meta {
+      color: #fff;
+    }
+
+    .bca {
+      float: right;
+      margin-top: -483px;
+      width: 238px;
+      height: 482px;
+      background: #fff;
+      line-height: 33px;
+    }
+
+    .bor_5_1 {
+      display: inline-block;
+      height: 55px;
+      margin: 18px;
+      vertical-align: middle;
+    }
+
+    .bor_5_2 {
+      position: relative;
+      font-size: 10px;
+      top: -51px;
+      left: 92px;
+    }
+
+    .baq_1 {
+      float: right;
+      margin-top: -50px;
+      margin-right: 27px;
+      width: 79px;
+      height: 20px;
+      border: 3px solid red;
+      line-height: 20px;
+      text-align: center;
+    }
+
+    .baq_2 {
+      float: right;
+      margin-top: -50px;
+      margin-right: 129px;
+      width: 79px;
+      height: 20px;
+      border: 3px solid red;
+      line-height: 20px;
+      text-align: center;
+    }
+
+    .baq_1 a:link {
+      color: red;
+    }
+
+    .baq_1 a:visited {
+      color: red;
+    }
+
+    .baq_1 a:hover {
+      background-color: #e01222;
+      color: #fff;
+    }
+
+    .baq_2 a:link {
+      color: red;
+    }
+
+    .baq_2 a:visited {
+      color: red;
+    }
+
+    .baq_2 a:hover {
+      background-color: #e01222;
+      color: #fff;
+    }
+
+    .right_1 {
+      border-top: 1px solid #dfe0e1;
+      width: 238px;
+    }
+
+    .right_2 {
+      position: relative;
+      border-top: 1px solid #dfe0e1;
+      width: 210px;
+      top: -6px;
+      right: -14px;
+    }
+
+    .sprit {
+      float: left;
+      width: 28px;
+      height: 30px;
+      border: 1px solid #fff;
+      background: url(./images/sprite.png) -155px -85px;
+      position: relative;
+      top: 11px;
+      left: 15px;
+    }
+
+    .sprit-1 {
+      float: left;
+      width: 28px;
+      height: 30px;
+      border: 1px solid #fff;
+      background: url(./images/sprite.png) -154px -41px;
+      position: relative;
+      top: 11px;
+      left: 15px;
+    }
+
+    .sprit-2 {
+      float: left;
+      width: 28px;
+      height: 30px;
+      border: 1px solid #fff;
+      background: url(./images/sprite.png) -197px -87px;
+      position: relative;
+      top: 11px;
+      left: 15px;
+    }
+
+    .sprit-3 {
+      float: left;
+      width: 28px;
+      height: 30px;
+      border: 1px solid #fff;
+      background: url(./images/sprite.png) -241px 1px;
+      position: relative;
+      top: 11px;
+      left: 15px;
+    }
+
+    .sprit-4 {
+      float: left;
+      width: 28px;
+      height: 30px;
+      border: 1px solid #fff;
+      background: url(./images/sprite.png) -86px -43px;
+      position: relative;
+      top: 11px;
+      left: 15px;
+    }
+
+    .sprit-5 {
+      float: left;
+      width: 28px;
+      height: 30px;
+      border: 1px solid #fff;
+      background: url(./images/sprite.png) 1px 0px;
+      position: relative;
+      top: 11px;
+      left: 15px;
+    }
+
+    .sprit-6 {
+      float: left;
+      width: 28px;
+      height: 30px;
+      border: 1px solid #fff;
+      background: url(./images/sprite.png) -42px -43px;
+      position: relative;
+      top: 11px;
+      left: 15px;
+    }
+
+    .sprit-7 {
+      float: left;
+      width: 28px;
+      height: 30px;
+      border: 1px solid #fff;
+      background: url(./images/sprite.png)-241px -87px;
+      position: relative;
+      top: 11px;
+      left: 15px;
+    }
+
+    .sprit-8 {
+      float: left;
+      width: 28px;
+      height: 30px;
+      border: 1px solid #fff;
+      background: url(./images/sprite.png) -130px 1px;
+      position: relative;
+      top: 11px;
+      left: 15px;
+    }
+
+    .sprit-9 {
+      float: left;
+      width: 28px;
+      height: 30px;
+      border: 1px solid #fff;
+      background: url(./images/sprite.png) -130px -43px;
+      position: relative;
+      top: 11px;
+      left: 15px;
+    }
+
+    .sprit-10 {
+      float: left;
+      width: 28px;
+      height: 30px;
+      border: 1px solid #fff;
+      background: url(./images/sprite.png) -286px -85px;
+      position: relative;
+      top: 11px;
+      left: 15px;
+    }
+
+    .sprit-11 {
+      float: left;
+      width: 28px;
+      height: 30px;
+      border: 1px solid #fff;
+      background: url(./images/sprite.png) -41px 2px;
+      position: relative;
+      top: 11px;
+      left: 15px;
+    }
+
+    .sprit_1 {
+      position: relative;
+      overflow: hidden;
+      border-top: 1px solid #f6f6f6;
+      border-left: 1px solid #f6f6f6;
+      float: left;
+      width: 58px;
+      height: 62px;
+      text-align: center;
+    }
+
+    .font {
+
+      font-size: 12px;
+      position: relative;
+      top: 19px;
+    }
+  </style>
+</head>
+
+<body class="body">
+  <div class="head_1">
+    <div class="head w"></div>
+    <div class="w">
+      <div class="head_4 ">
+        <div class="head_3 ">
+          <ul>
+            <li><a style="color:rgb(115, 115, 115)" class="bei w" href="#">&nbsp;&nbsp;&nbsp;&nbsp;<img src="./images/09.png" alt="">北京</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="head_2">
+    <div class="w">
+      <a class="biao" href="#">手机京东<img src="./images/03.png" height="75" width="75"alt=""></a>
+      <a class="biao" href="#">网站导航</a>
+      <a class="biao" href="#">客户服务</a>
+      <a class="biao" href="#">企业采购</a>
+      <a class="biao" href="#">京东会员</a>
+      <a class="biao" href="#">我的京东</a>
+      <a class="biao" href="#">我的订单</a>
+      <a class="biao" href="#" style="color:red">免费注册</a>
+      <a class="biao" href="#">你好,请登录</a>
+    </div>
+    <div class="w">
+      <div class="bor_3">
+        <div class="bor_3_1">
+          <p class="cat">
+            <img class="img_1" src="./images/05.png" alt="">我的购物车<img src="./images/07.png" alt="">
+          </p>
+        </div>
+      </div>
+      <div class="bor_2"></div>
+      <div class="bor_1">
+        <div class="bor_1_1">
+          <img class="img_2" src="./images/08.png" alt="">
+        </div>
+        <a class="biao_1 biao_2" href="#">17.5°橙</a>
+        <a class="biao_1 biao_2" href="#">1元抵822</a>
+        <a class="biao_1 biao_2" href="#">爱宠之家</a>
+        <a class="biao_1 biao_2" href="#">杰克琼斯</a>
+        <a class="biao_1 biao_2" href="#">低至五折</a>
+        <a class="biao_1 biao_2" href="#">coach</a>
+        <a class="biao_1 biao_2" href="#">无线路由器</a>
+        <a class="biao_1 biao_2" href="#">奶粉囤货</a>
+        <a class="biao_1 biao_2" href="#">电压力锅</a>
+      </div>
+      <div class="biao_3">
+        <a class="biao_3_1" href="#">秒杀</a>
+        <a class="biao_3_1" href="#">优惠券</a>
+        <a class="biao_3_1" href="#">抢购</a>
+        <a class="biao_3_1" href="#">拍卖</a>
+        <a class="biao_3_1" href="#">服装城</a>
+        <a class="biao_3_1" href="#">京东超市</a>
+        <a class="biao_3_1" href="#">生鲜</a>
+        <a class="biao_3_1" href="#">全球购</a>
+        <a class="biao_3_1" href="#">京东金融</a>
+        <div><img class="img_3" src="./images/10.png" alt=""></div>
+      </div>
+    </div>
+  </div>
+  <div class="w">
+    <div class="bc_1">
+      <ul class="bor_4_1">
+        <li><a class="bor_4" href="#">家用电器</a></li><br>
+        <li>
+          <a class="bor_4" href="#">手机</a>
+          <span class="meta">/</span>
+          <a class="bor_4" href="#">运营商</a>
+          <span class="meta">/</span>
+          <a class="bor_4" href="#">数码</a>
+        </li>
+        <li>
+          <a class="bor_4" href="#">电脑</a>
+          <span class="meta">/</span>
+          <a class="bor_4" href="#">办公</a>
+        </li>
+        <li>
+          <a class="bor_4" href="#">家具</a>
+          <span class="meta">/</span>
+          <a class="bor_4" href="#">家居</a>
+          <span class="meta">/</span>
+          <a class="bor_4" href="#">家居</a>
+          <span class="meta">/</span>
+          <a class="bor_4" href="#">厨具</a>
+        </li>
+        <li>
+          <a class="bor_4" href="#">男装</a>
+          <span class="meta">/</span>
+          <a class="bor_4" href="#">女装</a>
+          <span class="meta">/</span>
+          <a class="bor_4" href="#">童装</a>
+          <span class="meta">/</span>
+          <a class="bor_4" href="#">内衣</a>
+        </li>
+        <li>
+          <a class="bor_4" href="#">美妆个护</a>
+          <a class="bor_4" href="#">宠物</a>
+        </li>
+        <li>
+          <a class="bor_4" href="#">女鞋</a>
+          <span class="meta">/</span>
+          <a class="bor_4" href="#">箱包</a>
+          <span class="meta">/</span>
+          <a class="bor_4" href="#">钟表</a>
+          <span class="meta">/</span>
+          <a class="bor_4" href="#">珠宝</a>
+        </li>
+        <li>
+          <a class="bor_4" href="#">男鞋</a>
+          <span class="meta">/</span>
+          <a class="bor_4" href="#">运动</a>
+          <span class="meta">/</span>
+          <a class="bor_4" href="#">户外</a>
+        </li>
+        <li>
+          <a class="bor_4" href="#">汽车</a>
+          <span class="meta">/</span>
+          <a class="bor_4" href="#">汽车用品</a>
+        </li>
+        <li>
+          <a class="bor_4" href="#">母婴</a>
+          <span class="meta">/</span>
+          <a class="bor_4" href="#">玩具乐器</a>
+        </li>
+        <li>
+          <a class="bor_4" href="#">食品</a>
+          <span class="meta">/</span>
+          <a class="bor_4" href="#">酒类</a>
+          <span class="meta">/</span>
+          <a class="bor_4" href="#">生鲜</a>
+          <span class="meta">/</span>
+          <a class="bor_4" href="#">特产</a>
+        </li>
+        <li>
+          <a class="bor_4" href="#">礼品鲜花</a>
+          <span class="meta">/</span>
+          <a class="bor_4" href="#">农资绿植</a>
+        </li>
+        <li>
+          <a class="bor_4" href="#">医药保健</a>
+          <span class="meta">/</span>
+          <a class="bor_4" href="#">计生情趣</a>
+        </li>
+        <li>
+          <a class="bor_4" href="#">图书</a>
+          <span class="meta">/</span>
+          <a class="bor_4" href="#">音像</a>
+          <span class="meta">/</span>
+          <a class="bor_4" href="#">电子书</a>
+        </li>
+        <li>
+          <a class="bor_4" href="#">机票</a>
+          <span class="meta">/</span>
+          <a class="bor_4" href="#">酒店</a>
+          <span class="meta">/</span>
+          <a class="bor_4" href="#">旅游</a>
+          <span class="meta">/</span>
+          <a class="bor_4" href="#">生活</a>
+        </li>
+        <li>
+          <a class="bor_4" href="#">理财</a>
+          <span class="meta">/</span>
+          <a class="bor_4" href="#">众筹</a>
+          <span class="meta">/</span>
+          <a class="bor_4" href="#">白条</a>
+          <span class="meta">/</span>
+          <a class="bor_4" href="#">保险</a>
+        </li>
+      </ul>
+    </div>
+    <div class="bcs">
+      <div>
+        <img src="./images/01_1.jpg" alt="">
+        <img src="./images/01_2.jpg" alt="">
+        <img src="./images/01_3.jpg" style="float:right" alt="">
+      </div>
+    </div>
+    <div class="bca">
+      <img class="bor_5_1" src="./images/02_1.png" alt="">
+      <span style=position:relative;font-size:13px;color:#666;top:-13px;>Hi,欢迎来到京...</span>
+      <div class="bor_5_2">
+        <a href="#" style=font-size:13px;>登录</a>
+        <a href="#" style=font-size:13px;>注册</a>
+      </div>
+      <div class="baq_1">
+        <a href="#" style=font-size:15px;display:block;>新人福利</a>
+      </div>
+      <div class="baq_2">
+        <a href="#" style=font-size:15px;display:block;>PLUS会员</a>
+      </div>
+      <div class="right_1"></div>
+      <div style="font-size: 12px;">
+        <a href="#" style="position: relative;right: -28px;">促销</a>
+        <span style="position: relative;top: -2px;right: -30px;">|</span>
+        <a href="#" style="position: relative;right: -30px;">公告</a>
+        <a href="#" style="position: relative;right: -136px;">更多</a>
+      </div>
+      <div class="right_2"></div>
+      <div style="font-size: 12px;position: relative;right: -26px;">
+        <a href="#">七夕购鲜花赢生日会门票</a><br>
+        <a href="#">开学订火车票,抢券领优惠!</a><br>
+        <a href="#">每日享折扣,京东品质游</a><br>
+        <a href="#">奶粉2段,首购5折</a>
+      </div>
+      <div>
+        <ul>
+          <li class="sprit_1">
+            <a class="sprit" href="#">
+                            <span class="font">话费</span>
+            </a>
+          </li>
+          <li class="sprit_1">
+            <a class="sprit-1" href="#">
+              <span class="font">机票</span>
+            </a>
+          </li>
+          <li class="sprit_1">
+            <a class="sprit-2" href="#">
+                            <span class="font">酒店</span>
+            </a>
+          </li>
+          <li class="sprit_1">
+            <a class="sprit-3" href="#">
+              <span class="font">游戏</span>
+            </a>
+          </li>
+        </ul>
+        <ul>
+          <li class="sprit_1">
+            <a class="sprit-4" href="#">
+              <span class="font" style="display: block;width: 36px;position: relative;right: 3px;">企业购</span>
+            </a>
+          </li>
+          <li class="sprit_1">
+            <a class="sprit-5" href="#">
+              <span class="font" style="display: block;width: 36px;position: relative;right: 3px;">加油卡</span>
+            </a>
+          </li>
+          <li class="sprit_1">
+            <a class="sprit-6" href="#">
+              <span class="font" style="display: block;width: 36px;position: relative;right: 3px;">电影票</span>
+            </a>
+          </li>
+          <li class="sprit_1">
+            <a class="sprit-7" href="#">
+              <span class="font" style="display: block;width: 36px;position: relative;right: 3px;">火车票</span>
+            </a>
+          </li>
+        </ul>
+        <ul>
+          <li class="sprit_1">
+            <a class="sprit-8" href="#">
+              <span class="font">众筹</span>
+            </a>
+          </li>
+          <li class="sprit_1">
+            <a class="sprit-9" href="#">
+              <span class="font">理财</span>
+            </a>
+          </li>
+          <li class="sprit_1">
+            <a class="sprit-10" href="#">
+              <span class="font" style="display: block;width: 36px;position: relative;right: 3px;">礼品卡</span>
+            </a>
+          </li>
+          <li class="sprit_1">
+            <a class="sprit-11" href="#">
+              <span class="font">白条</span>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

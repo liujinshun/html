@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+        for(var n=100;n<1000;n++){
+          var i=parseInt (n/100);
+          var j=parseInt ((n/10)%10);
+          var k=parseInt (n%10);
+          if(n==i*i*i+j*j*j+k*k*k){
+            console.log(n);
+          }
+        }
+    </script>
+  </body>
+</html>
